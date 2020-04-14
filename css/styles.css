@@ -20,6 +20,7 @@ FOOTER {
 }
 
 .jumbotron {
+    margin: 0;
     padding: 30px0;
     background-image: linear-gradient(to right, #5637DD,#3046c5,#60106b);
     color: white;
@@ -30,3 +31,9 @@ FOOTER {
     border-bottom: 1px ridge;
     min-height: 200px;
 }
+
+.navbar {
+    margin: 0;
+    background-color: #901CAD;
+}
+
