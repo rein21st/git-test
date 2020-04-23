@@ -30,16 +30,15 @@
                     <h1>NuCamp</h1>
                     <h2>a better way to camp</h2>
                 </div>
-                <div class="col-md-4 col-xl-2">
-                    <a href="#reserveForm" class="btn btn-info btn-lg mt-4" role="button">Reserve Campsite</a>
-
+                <div class="col-md-4 col-xl-2 mt-4">
+                    <a href="#reserveForm" role="button" class="btn btn-lg btn-info ">Reserve Campsite</a>
                 </div>
-            </div>
         </div>
     </header>
 
+
     <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
-        
+       <!--Navbar setup--> 
         <div class="container">
             <a class="navbar-brand" href="#"><img src="img/logo.png" height="30" width="30" /></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nucampNavbar">
@@ -52,9 +51,52 @@
                     <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-list fa-lg"></i> Sites</a></li>
                     <li class="nav-item"><a class="nav-link" href="contactus.html"><i class="fa fa-address-card fa-lg"></i> Contact</a></li>
                 </ul>
+                <!--Added login button-->
+                <span class="navbar-text ml-auto">
+                    <a role="button" data-toggle="modal" data-target="#loginModal"><i class="fa fa-sign-in"></i> Login</a>
+                </span>
             </div>
         </div>
     </nav>
+<!--Info in login buttuon (Modals-->
+    <div id="loginModal" class="modal fade" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">Login </h3>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <form>
+                            <div class="form-row">
+                                <div class="form-group col-12">
+                                    <label class="sr-only" for="loginEmail">Email address</label>
+                                    <input type="email" class="form-control form-control-sm" id="loginEmail" placeholder="Enter email">
+                                </div>
+                                <div class="form-group col-12">
+                                    <label class="sr-only" for="loginPassword">Password</label>
+                                    <input type="password" class="form-control form-control-sm" id="loginPassword" placeholder="Password">
+                                </div>
+                                <div class="col">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox">
+                                        <label class="form-check-label"> Remember me
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+                                <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 <!--Container #2-->
     <div class="container">
         <div class="row row-content align-items-center">
@@ -87,11 +129,11 @@
                         <p>Nestled in the foothills of the Chrome Mountains,
                             this campground on the shores of the pristine React Lake is a favorite for fly fishers.</p>
                     </div>
-                    <img class="d-flex .ml-3 img-thumbnail" src="img/react-lake-thumb.jpg" alt="react lake " />
+                    <img class="d-flex ml-3 img-thumbnail" src="img/react-lake-thumb.jpg" alt="react lake " />
                 </div>
             </div>
-
         </div>
+
 
         <div class="row row-content align-items-center">
             <div class="col-sm-4 order-sm-last col-md-3">
@@ -109,17 +151,18 @@
                 </div>
             </div>
         </div>
-        <div class="row row-content align-items-center">
+        <div class="row row-content">
             <div class="col-sm-6 mx-auto">
                 <div class="card">
-                    <h3 class="card-header text-white bg-info">Reserve a Campsite</h3>
+                    <h3 class="card-header bg-info text-white">Reserve a Campsite</h3>
                     <div class="card-body">
 
                         <form id="reserveForm">
                             <div class="form-group row">
-                                <label for="Number of Campers" class="col-sm-6 col-form-label" >Number of Campers</label>
-                                <div class="col col-sm-6">
-                                    <select name="NumCampers form-control" id="NumCampers" class="form-control">
+                                <label for="numCampers" class="col-sm-6 col-form-label" >Number of Campers</label>
+                                <!--Select Dropdown-->
+                                <div class="col">
+                                    <select id="numCampers" class="form-control">
                                         <option selected>Select...</option>
                                         <option>1</option>
                                         <option>2</option>
@@ -130,15 +173,17 @@
                                     </select>
                                 </div>
                             </div>
+                            <!--Date-->
                             <div class="form-group row">
                                 <label for="Date" class="col-sm-6 col-form-label">Date</label>
-                                <div class=" col col-sm-6">
+                                <div class="col">
                                     <input type="date" class="form-control" id="date" name="date" placeholder="date" />
                                 </div>
                             </div>
+                            <!--Search button-->
                             <div class="form-group row">
                                 <div class="col">
-                                    <button type="submit" class="btn btn-primary btn-md">Search</button>
+                                    <button type="submit" class="btn btn-primary">Search</button>
                                 </div>
                             </div>
 
@@ -164,26 +209,21 @@
                 </div>
                 <div class="col-6 col-sm-5 text-center">
                     <h5>Social</h5>
-                    <a class="btn btn-social-icon btn-instagram" href="http://instagram.com/"><i
-                            class="fa fa-instagram"></i></a>
-                    <a class="btn btn-social-icon btn-facebook" href="http://facebook.com/"><i
-                            class="fa fa-facebook"></i></a>
-                    <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i
-                            class="fa fa-twitter"></i></a>
-                    <a class="btn btn-social-icon btn-google" href="http://youtube.com/"><i
-                            class="fa fa-youtube"></i></a>
+                    <a class="btn btn-social-icon btn-instagram" href="http://instagram.com/"><i class="fa fa-instagram"></i></a>
+                    <a class="btn btn-social-icon btn-facebook" href="http://facebook.com/"><i class="fa fa-facebook"></i></a>
+                    <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
+                    <a class="btn btn-social-icon btn-google" href="http://youtube.com/"><i class="fa fa-youtube"></i></a>
                 </div>
                 <div class="col-sm-4 text-center">
                     <a role="button" class="btn btn-link" href="tel:+12065551234"><i class="fa fa-phone"></i>
-                        1-206-555-1234</a><br />
-                    <a role="button" class="btn btn-link" href="mailto:campsites@nucamp.co"><i
-                            class="fa fa-envelope-o"></i>
-                        campsites@nucamp.co</a>
+                    1-206-555-1234</a><br />
+                    <a role="button" class="btn btn-link" href="mailto:campsites@nucamp.co"><i class="fa fa-envelope-o"></i>
+                    campsites@nucamp.co</a>
                 </div>
             </div>
         </div>
-
     </footer>
+
 
     <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
